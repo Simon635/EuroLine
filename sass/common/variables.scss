@@ -9,8 +9,22 @@
 }
 
 /* size */
-$tablet-width: 
-$desktop-width: 
+
+// Верхние границы брейкпоинтов (desktop-first)
+$screen-xl: 1919;
+$screen-lg: 1199;
+$screen-md: 959;
+$screen-sm: 639;
+$screen-xs: 479;  
+$screen-xxs: 320;
+
+// Базовые ширины макета для autoscale
+$base-xl: 1920;
+$base-lg: 1200;
+$base-md: 960;
+$base-sm: 640;
+$base-xs: 480;
+$base-xxs: 320;
 
 /* color */
 

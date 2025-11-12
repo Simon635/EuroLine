@@ -16,7 +16,44 @@ body {
   font-style: normal;
   font-weight: 300;
   line-height: 22px;
-  color: $base-color;
+  background-color: aqua;
+
+  transform: scale(calc(100vw / #{$base-xl}));
+  transform-origin: top left;
+  width: calc(100vw / calc(100vw / #{$base-xl}));
+  height: calc(100vh / calc(100vw / #{$base-xl}));
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  @media (max-width: #{$screen-xl}px) {
+    transform: scale(calc(100vw / #{$base-lg}));
+    width: calc(100vw / calc(100vw / #{$base-lg}));
+    height: calc(100vh / calc(100vw / #{$base-lg}));
+  }
+
+  @media (max-width: #{$screen-lg}px) {
+    transform: scale(calc(100vw / #{$base-md}));
+    width: calc(100vw / calc(100vw / #{$base-md}));
+    height: calc(100vh / calc(100vw / #{$base-md}));
+  }
+
+  @media (max-width: #{$screen-md}px) {
+    transform: scale(calc(100vw / #{$base-sm}));
+    width: calc(100vw / calc(100vw / #{$base-sm}));
+    height: calc(100vh / calc(100vw / #{$base-sm}));
+  }
+
+  @media (max-width: #{$screen-sm}px) {
+    transform: scale(calc(100vw / #{$base-xs}));
+    width: calc(100vw / calc(100vw / #{$base-xs}));
+    height: calc(100vh / calc(100vw / #{$base-xs}));
+  }
+  
+  @media (max-width: #{$screen-xs}px) {
+    transform: scale(calc(100vw / #{$base-xxs}));
+    width: calc(100vw / calc(100vw / #{$base-xxs}));
+    height: calc(100vh / calc(100vw / #{$base-xxs}));
+  }
 }
 
 main {
