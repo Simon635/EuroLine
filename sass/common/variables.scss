@@ -11,6 +11,7 @@
 /* size */
 
 // Верхние границы брейкпоинтов (desktop-first)
+$screen-xxl: 1920;
 $screen-xl: 1919;
 $screen-lg: 1199;
 $screen-md: 959;
@@ -28,4 +29,68 @@ $base-xxs: 320;
 
 /* color */
 
+$base-white-color: #ffffff;
+$base-dark-red-color: #b11016;
+$dark-grey-color: #4a4747;
+$colorless: rgba(0,0,0,0);
 
+/* mixin */
+@mixin card-bg(
+  $name,
+  $bg-x: center,
+  $w-desktop: 310px, $h-desktop: 197px,
+  $w-960: 340px, $h-960: 96px,
+  $w-640: 210px, $h-640: 101px,
+  $w-480: 145px, $h-480: 126px
+) {
+  width: $w-desktop;
+  min-height: $h-desktop;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  background-repeat: no-repeat;
+  background-position: $bg-x center;
+  background-size: cover;
+  background-image: image-set(
+    url("../img/#{$name}@1x.webp") type("image/webp") 1x,
+    url("../img/#{$name}@2x.webp") type("image/webp") 2x,
+    url("../img/#{$name}@1x.png") type("image/png") 1x,
+    url("../img/#{$name}@2x.png") type("image/png") 2x
+  );
+
+  @media (max-width: 960px) {
+    width: $w-960;
+    min-height: $h-960;
+    background-position: $bg-x center;
+    background-image: image-set(
+      url("../img/#{$name}@1x.webp") type("image/webp") 1x,
+      url("../img/#{$name}@2x.webp") type("image/webp") 2x,
+      url("../img/#{$name}@1x.png") type("image/png") 1x,
+      url("../img/#{$name}@2x.png") type("image/png") 2x
+    );
+  }
+
+  @media (max-width: 640px) {
+    width: $w-640;
+    min-height: $h-640;
+    background-position: $bg-x center;
+    background-image: image-set(
+      url("../img/#{$name}@1x.webp") type("image/webp") 1x,
+      url("../img/#{$name}@2x.webp") type("image/webp") 2x,
+      url("../img/#{$name}@1x.png") type("image/png") 1x,
+      url("../img/#{$name}@2x.png") type("image/png") 2x
+    );
+  }
+
+  @media (max-width: 480px) {
+    width: $w-480;
+    min-height: $h-480;
+    background-position: $bg-x center;
+    background-image: image-set(
+      url("../img/#{$name}@1x.webp") type("image/webp") 1x,
+      url("../img/#{$name}@2x.webp") type("image/webp") 2x,
+      url("../img/#{$name}@1x.png") type("image/png") 1x,
+      url("../img/#{$name}@2x.png") type("image/png") 2x
+    );
+  }
+}
