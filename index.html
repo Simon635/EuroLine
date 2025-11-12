@@ -10,8 +10,82 @@
 
 <body>
 	<header class="header">
-		<div class="header-container">
-			<img src="" alt="Логотип компании Евролиния">
+		<div class="header__container">
+			<picture>
+				<source width="100" height="39" type="image/svg" media="(min-width: $screen-sm)">
+				<source width="160" height="62" type="image/svg" media="(max-width: $screen-xl)">
+				<img src="img/logo.svg" width="256" height="100" alt="Логотип компании Евролиния.">
+			</picture>
+			<button class="header__menu-button header__menu-button--close">
+				<span class="header__button-text visually-hidden">Open/Close</span>
+			</button>
+			<div class="header__menu-container">
+				<div class="header__product">
+					<a class="header__navigation-item-title" href="#">Продукция</a>
+					<ul class="header__product-list">
+						<li class="header__product-item">
+							<a class="header__product-link" href="#" id="card-1">
+								<p>КПД-1</p>
+							</a>
+						</li>
+
+						<li class="header__product-item">
+							<a class="header__product-link" href="#" id="card-2">
+								<p>КПТД-2</p>
+							</a>
+						</li>
+
+						<li class="header__product-item">
+							<a class="header__product-link" href="#" id="card-3">
+								<p>КПТД-2</p>
+							</a>
+						</li>
+
+						<li class="header__product-item">
+							<a class="header__product-link" href="#" id="card-4">
+								<p>КПТД-2</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header__navigation-container">
+					<ul class="header__navigation-list">
+						<li class="header__navigation-item">
+							<h2 class="header__navigation-item-title">
+								<a class="header__navigation-item-link" href="#">О компании</a>
+							</h2>
+						</li>
+
+						<li class="header__navigation-item">
+							<h2 class="header__navigation-item-title">
+								<a class="header__navigation-item-link" href="#">Исследования</a>
+							</h2>
+							<a class="header__navigation-item-sublink" href="#">Лаборатория</a>
+							<a class="header__navigation-item-sublink" href="#">База знаний</a>
+						</li>
+
+						<li class="header__navigation-item">
+							<h2 class="header__navigation-item-title">
+								<a class="header__navigation-item-link" href="#">Консультация</a>
+							</h2>
+							<a class="header__navigation-item-sublink" href="#">Частые вопросы</a>
+							<a class="header__navigation-item-sublink" href="#">Подбор Типа КПТД</a>
+						</li>
+
+						<li class="header__navigation-item">
+							<h2 class="header__navigation-item-title">
+								<a class="header__navigation-item-link" href="#">Контакты</a>
+							</h2>
+							<a class="header__navigation-item-sublink header__navigation-item-sublink--number"
+								href="tel:+79852079037">+7 985
+								207-90-37</a>
+							<a class="header__navigation-item-sublink header__navigation-item-sublink--number"
+								href="tel:+79852079037">+7 985
+								207-90-37</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</header>
 	<main></main>
